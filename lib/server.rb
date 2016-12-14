@@ -26,7 +26,7 @@ module EBTail
 		end
 
 		def tail(files)
-			do_tail(files.join(' -100f '), "tail -100f ")
+			do_tail(files.join(' '), "tail --lines 100 -F ")
 			@session.process(0)
 		end
 
